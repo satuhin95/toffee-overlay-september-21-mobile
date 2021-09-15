@@ -1,0 +1,181 @@
+.purple__wrapper *{
+	margin: 0;
+	padding: 0;
+	user-select: none;
+}
+.purple__wrapper{
+	bottom: 0;
+	left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 320px;
+    height: 70px;
+    position: absolute;
+    background: url("images/bg.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+    overflow-y: hidden;
+
+}
+.purple__wrapper img{
+	 background: transparent !important;
+}
+.absolute{
+	position: absolute;
+}
+.purple__wrapper .purple_slide img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.purple_slide_1 {
+   width: 74px;
+    height: 26px;
+    left: 10px;
+    top: 24px;
+}
+
+.purple_slide_2 {
+     width: 320px;
+    height: 70px;
+    bottom: 2px;
+   
+}
+
+.purple_slide_3 {
+  width: 57px;
+    height: 40px;
+    top: 10px;
+    left: 134px;
+}
+
+.purple_slide_4 {
+    width: 58px;
+    height: 22px;
+    top: 18px;
+    left: 237px;
+}
+.purple_generic_icon {
+    position: absolute;
+    bottom: 20%;
+    right: 3px;
+    background: url("images/info.svg") no-repeat;
+    background-size: 100% 100%;
+    width: 18px;
+    height: 22px;
+    -webkit-animation: fadeIn24 1s 0.4s both;
+    animation: fadeIn24 1s 0.4s both;
+    cursor: pointer;
+    margin: 0 !important;
+    z-index: 1;
+}
+.purple_generic_close {
+    position: absolute;
+    bottom: 38px;
+    right: 3px;
+    background: url("images/close.svg") no-repeat;
+    background-size: 100% 100%;
+    width: 18px;
+    height: 22px;
+    -webkit-animation: fadeIn24 1s 0.4s both;
+    animation: fadeIn24 1s 0.4s both;
+    cursor: pointer;
+    margin: 0 !important;
+    z-index: 1;
+}
+.hideZoomOut {
+    animation-name: hideZoomOut;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+.hideZoomOutBottom {
+    animation-name: hideZoomOutBottom;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+.showZoomIn {
+    animation-name: showZoomIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.showZoomInBottom {
+    animation-name: showZoomInBottom;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+@keyframes hideZoomOut {
+    100% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+}
+@keyframes hideZoomOutBottom {
+    100% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3) translateY(100%);
+    }
+}
+@keyframes showZoomIn {
+    from {
+        transform: scale3d(0.5, 0.5, 0.5);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+@keyframes showZoomInBottom {
+    from {
+        transform: scale3d(0.5, 0.5, 0.5) translateY(50%);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+
+.topBottom {
+    animation-name: topBottom;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+@keyframes topBottom {
+    0%,
+    100% {
+        transform: translateY(1px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scaleX(1) scaleY(1);
+    }
+    50% {
+        transform: scale3d(0.90, 0.90, 0.90);
+    }
+    to {
+        transform: scaleX(1) scaleY(1);
+    }
+}
+@keyframes bottle {
+  0% {transform: rotateZ(0deg)}
+  10% {transform: rotateZ(-3deg)}
+  20% {transform: rotateZ(3deg)}
+  30% {transform: rotateZ(-3deg)}
+  40% {transform: rotateZ(3deg)}
+  50% {transform: rotateZ(-3deg)}
+  60% {transform: rotateZ(0deg)}
+ 100% {transform: rotateZ(0deg) }
+}
+.bottle{animation: bottle 3s ease-in-out infinite;}
